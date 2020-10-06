@@ -149,11 +149,7 @@ public class ChatServer {
                         break;
                     } else if (incoming.startsWith("PCHAT")) {
                         String nameAndChat = incoming.substring(5).trim();
-                        String name = "";
-                        int i = 0;
-                        while (!(nameAndChat.charAt(i) == (' '))) {
-                            name += nameAndChat.charAt(i);
-                        }
+                        String name = nameAndChat.substring(nameAndChat.indexOf(" "));
                         String chat = nameAndChat.substring(name.length() + 1);
                         if (chat.length() > 0) {
                             String msg = String.format("%s (private): %s", client.getUserName(), chat);

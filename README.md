@@ -11,3 +11,5 @@ Now, you can start sending messages! All you have to do is type in the message a
 If you see a comment that you would love to respond to, but are not exactly how to put into words, just use a reaction! Start by typing an asterisk (*) followed by the reaction you wish to use. Just make sure that any reactions that have multiple words are separated with dashes, not spaces, as that will cause an error.
 
 Whenever you want to leave, you just have to type /quit, and you will be disconnected from the server, and everyone can see if you left. 
+
+Side Note: IntelliJ wasn't working for Tanish, so he shared the files from Google Drive and then Alex posted them after making his revisions, after merging, everything stopped working on IntelliJ.

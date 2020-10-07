@@ -1,4 +1,4 @@
-public class ClientServerHandler implements Runnable extends ChatClient {
+public class ClientServerHandler extends ChatClient implements Runnable{
     @Override
     public void run() {
         try {

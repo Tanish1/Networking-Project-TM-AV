@@ -12,4 +12,14 @@ If you see a comment that you would love to respond to, but are not exactly how 
 
 Whenever you want to leave, you just have to type /quit, and you will be disconnected from the server, and everyone can see if you left. 
 
+New In Release 2:
+
+Everything sent and recieved by the client and server are now serialized! That means they are sent as a stream of bytes rather than plain text, so that can help us implement more things later on!
+
+Whenever a client joins the server, the server outputs a list of people in that room. And, a NEW command has been added, typing /whoishere will display a list of clients connected to the server.
+
+Now, you can send multiple clients a chat privately, just say @username @username, and it will send the chat to multiple people (@username @username CHAT). 
+
+The most exciting part: The client now has a new GUI! Just input the IP address and the port as last time, but now into the appropriate boxes. And, fill out the username after that, and you should be good to go! Think of this as a GUI based client rather than a console-based oe, and it still retains all the same features of the previous release. And, just in case if you wanted to use the older chatclient, you can always do that without the GUI in this release! All you have to do is use ChatClient.java rather than ChatGUIClient.java. And now, we have special buttons to trigger certain commands! Just click the button to perform the action.
+
 Side Note: IntelliJ wasn't working for Tanish, so he shared the files from Google Drive and then Alex posted them after making his revisions, after merging, everything stopped working on IntelliJ.

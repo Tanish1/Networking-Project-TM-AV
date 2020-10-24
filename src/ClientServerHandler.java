@@ -1,4 +1,12 @@
-public class ClientServerHandler extends ChatClient implements Runnable{
+import java.io.BufferedReader;
+
+public class ClientServerHandler implements Runnable {
+    BufferedReader socketIn;
+
+    public ClientServerHandler(BufferedReader socketIn) {
+        this.socketIn = socketIn;
+    }
+
     @Override
     public void run() {
         try {

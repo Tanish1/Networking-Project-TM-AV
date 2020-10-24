@@ -26,13 +26,13 @@ public class ChatClient {
         String name = userInput.nextLine().trim();
         out.println(name); //out.flush();
 
-        while (!(socketIn.readLine().trim().equals("SUBMITNAME"))) {
+        while (!(socketIn.readLine().trim().equals("SUBMITNAME")))  {
             System.out.println("Name isn't available or invalid. Please enter a new name:");
             name = userInput.nextLine().trim();
             out.println(name);
         }
         // start a thread to listen for server messages
-        ClientServerHandler listener = new ClientServerHandler();
+        ClientServerHandler listener = new ClientServerHandler(socketIn);
         Thread t = new Thread(listener);
         t.start();
 

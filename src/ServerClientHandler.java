@@ -6,7 +6,7 @@ import java.net.SocketException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ServerClientHandler extends ChatServer implements Runnable {
+public class ServerClientHandler implements Runnable {
     // Maintain data about the client serviced by this thread
     ClientConnectionData client;
     ArrayList<ClientConnectionData> clientList;
@@ -64,7 +64,7 @@ public class ServerClientHandler extends ChatServer implements Runnable {
         try {
             ArrayList<ClientConnectionData> newClientList = new ArrayList<>();
             for (int i = 0; i < clientList.size(); i++) {
-                if (clientList.get(i).getUserName() == name) {
+                if (clientList.get(i).getUserName().equals(name)) {
                     newClientList.add(clientList.get(i));
                     break;
                 }
